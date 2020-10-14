@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import {StyledButton} from "./StyledButton";
 
 
 export default function AddArticleForm({onAddArticleForm}){
@@ -10,17 +11,15 @@ export default function AddArticleForm({onAddArticleForm}){
             title: title,
             body: body
         } ;
-        onAddArticleForm(
-        );
+        onAddArticleForm(data);
     }
     return(
         <form>
             <label>Title:<input onChange={event => {setTitle(event.target.value)}} /> </label>
-            {title}
             <label> Body: <input onChange={event => {setBody(event.target.value)}}/> </label>
-            <button type="button" onClick={
+            <StyledButton type="button" onClick={
                 sendData
-            }> Submit Article </button>
+            }> Submit Article </StyledButton>
         </form>
     );
 }

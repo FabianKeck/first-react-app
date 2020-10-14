@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
         <AddArticleForm onAddArticleForm={addToArticleList}/>
-        {articleList.map(art=><Article data={art} key={art.key}/>)}
+        {articleList.map(art=><Article data={art}/>)}
     </div>
   );
 }
