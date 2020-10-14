@@ -1,8 +1,12 @@
 import React from "react";
+import {StyledArticleHeader} from "./StyledArticleHeader";
 
-function ArticleHeading({title}){
+
+function ArticleHeading(props){
     return (
-        <h2 className="ArticleHeading"> {title} </h2>
+        <StyledArticleHeader>
+            {props.children}
+        </StyledArticleHeader>
     );
 }
 export default ArticleHeading;

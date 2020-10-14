@@ -13,6 +13,7 @@ export default function AddArticleForm({onAddArticleForm}){
         } ;
         onAddArticleForm(data);
     }
+
     return(
         <form>
             <label>Title:<input onChange={event => {setTitle(event.target.value)}} /> </label>
